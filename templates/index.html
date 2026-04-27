@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,16 +8,18 @@
     <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
+
 <body>
     <div class="container">
         <header class="header">
             <h1>Phishing Detection System</h1>
-            <p>Real-time URL analysis using advanced machine learning</p>
+            <p>Real-time URL analysis</p>
         </header>
 
         <main class="scanner-box">
             <div class="input-group">
-                <input type="text" id="urlInput" placeholder="Enter URL to scan (e.g. https://google.com)" autocomplete="off">
+                <input type="text" id="urlInput" placeholder="Enter URL to scan (e.g. https://google.com)"
+                    autocomplete="off">
                 <div class="loader" id="loader"></div>
                 <button id="scanBtn">Scan Now</button>
             </div>
@@ -32,22 +35,22 @@
                         <div class="confidence-bar">
                             <div class="confidence-fill" id="confidenceFill"></div>
                         </div>
-                        <p class="feature-label" style="margin-top: 0.5rem">Confidence: <span id="confidenceText">0%</span></p>
+                        <p class="feature-label" style="margin-top: 0.5rem">Confidence: <span
+                                id="confidenceText">0%</span></p>
                     </div>
                 </div>
 
-                <h3 style="margin-bottom: 1rem; color: var(--text-dim); font-size: 0.9rem; text-transform: uppercase; letter-spacing: 1px">Technical Analysis</h3>
+                <h3
+                    style="margin-bottom: 1rem; color: var(--text-dim); font-size: 0.9rem; text-transform: uppercase; letter-spacing: 1px">
+                    Technical Analysis</h3>
                 <div class="features-grid" id="featuresGrid">
                     <!-- Features populated by JS -->
                 </div>
             </div>
         </main>
-
-        <footer style="margin-top: 3rem; text-align: center; color: var(--text-dim); font-size: 0.8rem">
-            <p>&copy; 2026 Phishing Detection System. Secure Connectivity Intelligence.</p>
-        </footer>
     </div>
 
     <script src="{{ url_for('static', filename='js/main.js') }}"></script>
 </body>
+
 </html>
